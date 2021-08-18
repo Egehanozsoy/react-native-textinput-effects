@@ -120,6 +120,7 @@ declare module "react-native-textinput-effects" {
     iconName?: string;
     labelHeight?: number;
     borderHeight?: number;
+    onIconPress ?: () => void
   }
 
   class Sae extends BaseClass<SaeProps> {}
