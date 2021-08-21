@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { LeftArrow, Navbar, RightArrow, SaleRollLogo } from '../components'
+import { HomeFeature, LeftArrow, Navbar, RightArrow, SaleRollLogo } from '../components'
 import bg from '../assets/images/banner.png'
 import COLORS from '../constants/COLORS'
 
@@ -24,7 +24,9 @@ function HomePage() {
 
                 <div style={{ backgroundColor: '#164E63' }} className="absolute inset-0 opacity-80 mix-blend-multiply min-h-screen" />
             </div>
-            <div className="min-h-screen flex-1 flex flex-col">
+
+
+            <div className="min-h-full flex-1 flex flex-col">
                 <div>
                     <h4 className="mt-10  mx-auto text-center  text-2xl sm:text-3xl  lg:text-5xl ">
                         Connecting qualified borrowers with real estate lenders.
@@ -34,64 +36,33 @@ function HomePage() {
                     </h2>
                 </div>
 
-
-
-                <div className="mt-5  flex flex-col justify-between  items-baseline">
-
-                    <div className=" flex flex-1 justify-aroundd mt-5 px-5 py-5 flex-col sm:flex-row">
-                        <div className="flex flex-col">
-                            <text className="text-3xl mt-10 sm:text-3xl text-center">Lenders</text>
-                            <text className="text-base sm:text-xl max-w-xl  text-center text-gray-500">Lenders pick a qualified borrower based on their property and investment needs.</text>
-                        </div>
-                        <div className="flex flex-col mt-10 ">
-                            <text className="text-3xl sm:text-3xl text-center">Marketplace</text>
-                            <text className="text-base sm:text-xl max-w-xl  text-center text-gray-500">We analyze borrowers, match them with qualified lenders, and facilitate the entire transaction online.</text>
-                        </div>
-                        <div className="flex flex-col mt-10 ">
-                            <text className="text-3xl sm:text-3xl text-center">Borrowers</text>
-                            <text className="text-base sm:text-xl max-w-xl text-center text-gray-500">Borrowers share basic information about their investment needs</text>
-                        </div>
-
+                <div className="mt-5 flex-1  flex flex-col justify-between  items-baseline">
+                    <div className="flex-1 -mb-28  self-center hidden md:hidden sm:hidden lg:flex  justify-center mt-5  flex-col sm:flex-row">
+                        <img className="  mb-5" src='images/leftarrow.png' />
+                        <SaleRollLogo className="self-end " black />
+                        <img className="  mb-5" src='images/rightarrow.png' />
                     </div>
 
-                    <SaleRollLogo className="self-center mt-20" black />
-
+                    <div className="  flex flex-1 justify-around mt-5 items-center flex-col sm:flex-row">
+                        <div className="flex flex-col  self-center  items-center md:w-1/6 lg:w-1/6 sm:w-5/6  sm:mt-5 lg:-mt-96">
+                            <text className="text-xl font-semibold">Lenders</text>
+                            <text className="text-base font-normal text-center text-gray-500">Lenders pick a qualified borrower based on their property and investment needs.</text>
+                        </div>
+                        <div className="flex flex-col mt-5 items-center  md:w-2/6 lg:w-2/6 sm:w-5/6">
+                            <text className="text-xl font-semibold">Marketplace</text>
+                            <text className="text-base text-center font-normal  text-gray-500">We analyze borrowers, match them with qualified lenders, and facilitate the entire transaction online.</text>
+                        </div>
+                        <div className="flex flex-col self-center  items-center md:w-1/6 lg:w-1/6 sm:w-5/6  sm:mt-5 lg:-mt-96">
+                            <text className="text-xl font-semibold">Borrowers</text>
+                            <text className="text-base text-center font-normal text-gray-500">Borrowers share basic information about their investment needs</text>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div className="min-h-screen flex-1 bg-gray-200 items-center justify-around flex lg:flex-row md:flex-row flex-col ">
+                <HomeFeature className="flex flex-col items-center lg:w-2/4 md:w-8/12 sm:w-8/12" buttonText='Learn About Investing' topText='FOR LENDERS' title='Invest in real estate' description='See a list of borrowers in your area looking to make a deal. Send an anonymous message to get the conversation started. Close on your deals quickly and manage the entire process online.' />
+                <HomeFeature className="flex flex-col items-center lg:w-2/4 md:w-8/12 sm:w-8/12" buttonText='Learn About Funding' topText='FOR BORROWERS' title='Fund your investment' description='We’ll connect you with a reliable local lender to fund your flip or investment property. Close on your deals quicker than a bank loan. Manage your deal online from start to finish for free.' />
 
-            <div className="min-h-screen flex-1 flex flex-col">
-                <div>
-                    <h4 className="mt-10  mx-auto text-center  text-2xl sm:text-3xl  lg:text-5xl ">
-                        Connecting qualified borrowers with real estate lenders.
-                    </h4>
-                    <h2 style={{ color: COLORS.cyan }} className="mx-auto text-center text-base p-5   lg:text-xl ">
-                        Funding real estate investment without traditional banks, and doing it all online.
-                    </h2>
-                </div>
-
-
-
-                <div className="mt-5  flex flex-col justify-between  items-baseline">
-
-                    <div className=" flex flex-1 justify-aroundd mt-5 px-5 py-5 flex-col sm:flex-row">
-                        <div className="flex flex-col">
-                            <text className="text-3xl mt-10 sm:text-3xl text-center">Lenders</text>
-                            <text className="text-base sm:text-xl max-w-xl  text-center text-gray-500">Lenders pick a qualified borrower based on their property and investment needs.</text>
-                        </div>
-                        <div className="flex flex-col mt-10 ">
-                            <text className="text-3xl sm:text-3xl text-center">Marketplace</text>
-                            <text className="text-base sm:text-xl max-w-xl  text-center text-gray-500">We analyze borrowers, match them with qualified lenders, and facilitate the entire transaction online.</text>
-                        </div>
-                        <div className="flex flex-col mt-10 ">
-                            <text className="text-3xl sm:text-3xl text-center">Borrowers</text>
-                            <text className="text-base sm:text-xl max-w-xl text-center text-gray-500">Borrowers share basic information about their investment needs</text>
-                        </div>
-
-                    </div>
-
-                    <SaleRollLogo className="self-center mt-20" black />
-
-                </div>
             </div>
         </div>
     )
